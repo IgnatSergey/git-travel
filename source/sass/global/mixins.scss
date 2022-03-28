@@ -1,0 +1,12 @@
+@mixin non-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font-montserrat($size: 12px, $height: 15px, $weight: 500) {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}

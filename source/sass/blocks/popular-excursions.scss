@@ -1,0 +1,157 @@
+.division-title {
+  @include font-montserrat(24px, 29px, 700);
+  color: $button-color-start;
+  margin: 0;
+  margin-bottom: 90px;
+}
+
+.popular-excursions__show-all {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    @include font-montserrat(12px, 15px, 500);
+    color: $basic-black;
+    text-decoration: underline;
+    margin-top: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.popular-excursions__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.popular-excursions__list {
+  @include non-list();
+  @include font-montserrat(13px, 16px, 500);
+  color: $basic-white;
+  display: flex;
+  overflow: hidden;
+  margin-right: -24px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: -79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -160px;
+  }
+}
+
+.popular-excursions__item {
+  box-sizing: border-box;
+  min-width: 280px;
+  min-height: 540px;
+  padding: 182px 15px 30px 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 11px;
+  // border: 1px solid red;
+  overflow: hidden;
+  margin-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 295px;
+    min-height: 490px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 360px;
+    min-height: 497px;
+    padding-bottom: 42px;
+  }
+}
+
+.popular-excursions_image-container {
+  height: 100%;
+  width: 100%;
+  // display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.popular-excursions__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-excursions__short-description {
+  margin: 0;
+}
+
+.popular-excursions__tour-title {
+  margin: 0;
+  @include font-montserrat(13px, 17px, 700);
+  color: $basic-yellow;
+  margin-bottom: 10px;
+}
+
+.popular-excursions__features-list {
+  @include non-list();
+  @include font-montserrat(12px, 15px, 500);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.popular-excursions__features-item {
+  position: relative;
+  margin-left: 31px;
+
+  &:first-child {
+    margin-left: 16px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.popular-excursions__features-item--time::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: -16px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../../img/icon_time.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-excursions__features-item--cost::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -16px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../../img/icon_money.svg");
+  background-repeat: no-repeat;
+}
+
+.popular-excursions__description {
+  margin: 0;
+}
+
+.popular-excursions__link {
+  margin-top: auto;
+  // flex-basis: 40px;
+  width: 160px;
+  height: 40px;
+  padding-top: 12px;
+  padding-left: 43px;
+}

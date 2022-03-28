@@ -1,0 +1,129 @@
+.main-nav__toggle {
+  position: absolute;
+  right: -10px;
+  top: 24px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  right: 10px;
+  width: 40px;
+  height: 5px;
+  background-color: $basic-white;
+  border-radius: 10px;
+  box-shadow: 0 10px 0 0 $basic-white, 0 20px 0 0 $basic-white;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+@media (max-width: $table-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  display: block;
+  position: static;
+  margin-left: -24px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: -79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+  }
+}
+
+.main-nav__list {
+  @include non-list;
+  margin-top: 20px;
+  position: absolute;
+  width: 100vw;
+  left: -24px;
+  top: 109px;
+  z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    left: -79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $desktop-width) {
+    &:last-child {
+      margin-right: -10px;
+    }
+  }
+}
+
+.main-nav__link {
+  display: block;
+  text-align: center;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  background-color: $basic-white;
+  color: $basic-black;
+  border-bottom: 1px solid $basic-black;
+
+  @include font-montserrat(20px, 20px, 800);
+
+  @media (min-width: $desktop-width) {
+    @include font-montserrat(14px, 17px, );
+    padding: 10px;
+    color: $basic-white;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+ .main-nav__item--current .main-nav__link{
+  @media (min-width: $desktop-width) {
+    color: $basic-yellow;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 32px;
+    left: 21px;
+    width: 25px;
+    height: 1.5px;
+    background-color: $basic-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
