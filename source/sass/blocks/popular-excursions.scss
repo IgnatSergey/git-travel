@@ -1,7 +1,14 @@
+.popular-excursions {
+  margin-bottom: 151px;
+}
+
 .division-title {
   @include font-montserrat(24px, 29px, 700);
   color: $button-color-start;
   margin: 0;
+}
+
+.popular-excursions__title {
   margin-bottom: 90px;
 }
 
@@ -34,9 +41,11 @@
   display: flex;
   overflow: hidden;
   margin-right: -24px;
+  margin-bottom: 55px;
 
   @media (min-width: $tablet-width) {
     margin-right: -79px;
+    margin-bottom: 41px;
   }
 
   @media (min-width: $desktop-width) {
@@ -149,9 +158,64 @@
 
 .popular-excursions__link {
   margin-top: auto;
-  // flex-basis: 40px;
   width: 160px;
   height: 40px;
   padding-top: 12px;
   padding-left: 43px;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__controls-container {
+  margin-left: -8px;
+  margin-right: 51px;
+}
+
+.slider__scale {
+  position: relative;
+  height: 2px;
+  background-color: $scale-color;
+  margin-right: -24px;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    margin-right: -79px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -160px;
+  }
+}
+
+.slider__button-leaf {
+  width: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+.slider__button-leaf svg {
+  fill: none;
+  stroke: $scale-color;
+}
+
+.slider__button-leaf--back {
+  margin-right: 15px;
+}
+
+.slider__button--active svg {
+  stroke: $button-active-color;
+}
+
+.slider__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 82px;
+  height: 2px;
+  background-color: $button-active-color;
 }

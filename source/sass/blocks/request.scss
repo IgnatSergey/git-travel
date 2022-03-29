@@ -1,0 +1,101 @@
+.request {
+  min-height: 928px;
+  box-sizing: border-box;
+  padding-top: 25px;
+
+  background-image: url("../../img/background_form_mobil.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background_form_mobil@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 640px;
+    padding-top: 0;
+    background-image: url("../../img/background_form_tablet.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_form_tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/background_form_desktop.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_form_desktop@2x.jpg");
+    }
+  }
+}
+
+.request__form-wrapper {
+  box-sizing: border-box;
+  min-height: 640px;
+  padding-left: 43px;
+  padding-right: 43px;
+  padding-bottom: 42px;
+  padding-top: 137px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 560px;
+    padding-left: 105px;
+    padding-right: 95px;
+  }
+}
+
+.request__description-question {
+  @include font-montserrat(24px, 29px, 700);
+  color: $basic-white;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.request__description-text {
+  @include font-montserrat(14px, 17px, 500);
+  color: $basic-yellow;
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.request__form {
+  margin-bottom: 38px;
+}
+
+.request__input {
+  @include font-montserrat(12px, 15px, 500);
+  color: $basic-white;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $basic-white;
+  width: 100%;
+  margin-bottom: 45px;
+
+  &::placeholder {
+    @include font-montserrat(12px, 15px, 500);
+    color: $basic-white;
+  }
+}
+
+.request__button {
+  border: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: unset;
+  }
+}

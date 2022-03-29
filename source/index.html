@@ -234,24 +234,160 @@
             </a>
           </li>
         </ul>
-        <button class="slider-button-leaf slider-button-back" type="button">
-        </button>
-        <button class="slider-button-leaf slider-button-next" type="button">
-        </button>
-        <div class="slider-controls">
-
+        <div class="slider__controls">
+          <div class="slider__controls-container">
+            <button class="slider__button-leaf slider__button-leaf--back" type="button">
+              <svg height="43" width="24">
+                <use xlink:href="img/sprite.svg#icon_button_back"></use>
+              </svg>
+              <!-- <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 0.999998L2.49433 20.2655C1.16332 21.4579 1.16333 23.5421 2.49433 24.7345L24 44" stroke="#D4D4D4" stroke-width="2"/>
+                </svg> -->
+            </button>
+            <button class="slider__button-leaf slider__button-leaf-next slider__button--active" type="button">
+              <svg height="43" width="24">
+                <use xlink:href="img/sprite.svg#icon_button_next"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="slider__scale">
+            <div class="slider__bar"></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="about-us">
-      <picture>
-
-      </picture>
-      <div class="container">
+      <div class="container container-vertical-center">
         <div class="about-us__wrapper">
-          <h2 class="about-us__title">О нас</h2>
+          <h2 class="about-us__title division-title">О нас</h2>
+          <div class="about-us__text-wrapper">
+            <p class="about-us__text">PeroTravel - Первый онлайн-сервис по бронированию экскурсий без очередей и
+              операторов.<br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+            <p class="about-us__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+              doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto
+              beatae vitae dicta sunt explicabo.</p>
+          </div>
           <p class="about-us__text"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="excursions_types">
+      <div class="container">
+        <h2 class="excursions-types__title division-title">Виды экскурсий</h2>
+        <ul class="excursions-types__list">
+          <li class="excursions-types__item excursions-types__item--bus">
+            <h3 class="excursions-types__name">Автобусный тур</h3>
+            <p class="excursions-types__description">Один из самых насыщенных впечатлениями, доступных по цене и
+              популярных видов отдыха. Во время одной поездки можно посмотреть достопримечательности сразу нескольких
+              городов, причем обойдется это едва ли не в разы дешевле классического экскурсионного тура с ночевками в
+              отелях.</p>
+          </li>
+          <li class="excursions-types__item excursions-types__item--yacht">
+            <h3 class="excursions-types__name">Яхтинг</h3>
+            <p class="excursions-types__description">Это то же, что круиз на лайнере или прогулка на пароме, только на
+              яхте больше свободы, размеры судна в разы меньше, нет назойливой команды, можно самостоятельно
+              почувствовать себя капитаном, постоять за штурвалом. Именно здесь вы почувствуете величайшие просторы
+              Черногор моря.</p>
+          </li>
+          <li class="excursions-types__item excursions-types__item--jeep">
+            <h3 class="excursions-types__name">Джиппинг</h3>
+            <p class="excursions-types__description">Это путешествие на автомобилях высокой проходимости с преодолением
+              естественных препятствий, это экстремальный вид спорта и отдыха, представляющий собой прохождение
+              туристического маршрута по бездорожью на автомобилях.</p>
+          </li>
+          <li class="excursions-types__item excursions-types__item--canyon">
+            <h3 class="excursions-types__name">Каньонинг</h3>
+            <p class="excursions-types__description">Это экстремально-спортивный вид отдыха, который заключается в
+              преодолении каньонов (обводненных или нет) при помощи альпинистского и иного снаряжения, а иногда и вброд,
+              но без лодок или иных плавсредств</p>
+          </li>
+        </ul>
+        <p class="excursions-types__offer">Выбирайте на нашем сайте экскурсию, которая подходит именно вам и
+          записывайтесь онлайн без очередей, просто и быстро!</p>
+        <a class="excursions-types__link button-link" href="#">К экскурсиям</a>
+      </div>
+    </section>
+
+    <section class="reviews">
+      <div class="container">
+        <div class="reviews__header">
+          <h2 class="reviews__title division-title">Отзывы</h2>
+          <a href="reviews__link">Смотреть все</a>
+        </div>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <img class="reviews__avatar" src="img/Ivan_avatar.jpg" srcset="img/Ivan_avatar@2x.jpg" width="80"
+              height="80" alt="Аватарка Ивана Иванова">
+            <div class="reviews__text-wrapper">
+              <p class="revies__data">Иван Иванов, 25 лет</p>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit
+                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa
+                qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <img class="reviews__avatar" src="img/Ivanov_avatar.jpg" srcset="img/Ivanov_avatar@2x.jpg" width="80"
+              height="80" alt="Аватарка Ивана Иванова">
+            <div class="reviews__text-wrapper">
+              <p class="revies__data">Иван Иванов, 25 лет</p>
+              <p class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit
+                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa
+                qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="slider__controls">
+          <div class="slider__controls-container">
+            <button class="slider__button-leaf slider__button-leaf--back" type="button">
+              <svg height="43" width="24">
+                <use xlink:href="img/sprite.svg#icon_button_back"></use>
+              </svg>
+              <!-- <svg width="25" height="45" viewBox="0 0 25 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 0.999998L2.49433 20.2655C1.16332 21.4579 1.16333 23.5421 2.49433 24.7345L24 44" stroke="#D4D4D4" stroke-width="2"/>
+                </svg> -->
+            </button>
+            <button class="slider__button-leaf slider__button-leaf-next slider__button--active" type="button">
+              <svg height="43" width="24">
+                <use xlink:href="img/sprite.svg#icon_button_next"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="slider__scale">
+            <div class="slider__bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="request">
+      <div class="container">
+        <h2 class="visually-hidden">Форма заявки</h2>
+        <div class="request__form-wrapper">
+          <p class="request__description-question">Остались вопросы?</p>
+          <p class="request__description-text">Оставь заявку и мы ответим</p>
+          <form class="request__form" action="#" method="post">
+            <label class="request__label visually-hidden" for="name">Имя</label>
+            <input class="request__input" id="name" type="text" placeholder="Имя">
+            <label class="request__label visually-hidden" for="phone">Телефон</label>
+            <input class="request__input" id="phone" type="tel" placeholder="Телефон">
+            <label class="request__label visually-hidden" for="email">Почта</label>
+            <input class="request__input" id="email" type="email" placeholder="Почта">
+            <button class="request__button button-link" type="submit">Оставить заявку</button>
+          </form>
+
         </div>
       </div>
     </section>
