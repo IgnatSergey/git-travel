@@ -1,0 +1,141 @@
+.page-footer {
+  padding-top: 48px;
+  padding-bottom: 49px;
+  @include font-montserrat(12px, 15px, 500);
+  color: $basic-black;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.page-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 105px 107px auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 210px 210px auto;
+  }
+}
+
+.page-footer__logo-link {
+  margin-bottom: 108px;
+  grid-column: 1/-1;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+    grid-column: 1/2;
+  }
+}
+
+.page-footer__nav,
+.page-footer__connection-list,
+.social-footer-list {
+  @include non-list();
+  color: $basic-black;
+}
+
+.page-footer__connection-list {
+  @media (min-width: $tablet-width) {
+    height: 79px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    margin-top: 15px;
+  }
+}
+
+.page-footer__connection-link,
+.page-footer__nav-link {
+  @include font-montserrat(12px, 15px, 500);
+  color: $basic-black;
+
+  @media (min-width: $desktop-width) {
+    @include font-montserrat(14px, 17px, 500);
+  }
+}
+
+.page-footer__nav {
+  @media (min-width: $tablet-width) {
+    margin-top: 15px;
+  }
+}
+
+.page-footer__nav-item {
+  margin-bottom: 5px;
+}
+
+.page-footer__connection-item {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 112px;
+  }
+}
+
+.page-footer__connection-link {
+  display: flex;
+  align-items: center;
+}
+
+.connection-item__icon {
+  margin-right: 5px;
+}
+
+.connection-item__icon-tg {
+  fill: none;
+  stroke: $basic-black;
+}
+
+.social-footer-list {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    transform: translateX(0);
+  }
+}
+
+.social-footer-item {
+  margin-right: 6px;
+}
+
+.social-footer__icon-vk {
+  fill: $vk-color;
+}
+
+.social-footer__icon-inst {
+  fill: $inst-color;
+}
+
+.social-footer__icon-fb {
+  fill: none;
+  stroke: $fb-color;
+}

@@ -1,0 +1,140 @@
+.gallery {
+  margin-bottom: 150px;
+}
+
+.gallery__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.gallery__link {
+  @include font-montserrat(12px, 15px, 500);
+  color: $basic-black;
+  text-decoration: underline;
+}
+
+.gallery-container {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 15px;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 180px 180px;
+  grid-template-rows: 186px 194px 260px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 205px 267px 216px;
+    grid-template-rows: 264px 283px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 216px 266px 362px 266px 216px;
+    grid-template-rows: 280px 123px 123px;
+  }
+}
+
+.gallery__image-wrapper {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.gallery__image-mobile {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+}
+
+.gallery__image-tablet {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.gallery__image-desktop {
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.gallery__image-lake {
+  grid-column: 1/3;
+  @media (min-width: $desktop-width) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+}
+
+.gallery__image-waterfall {
+  grid-row: 1/3;
+  @media (min-width: $tablet-width) {
+    grid-row: 1/3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/4;
+  }
+}
+
+.gallery__image-bike {
+  grid-row: 1/2;
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.gallery__image-sunset {
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.gallery__image-horse {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+}
+
+.gallery__image-city {
+  @media (min-width: $desktop-width) {
+    grid-row: 3/4;
+  }
+}
+
+.gallery__image-sea {
+  grid-row: 2/3;
+  @media (min-width: $tablet-width) {
+    grid-column: 2/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 4/6;
+    grid-row: 2/4;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    height: 107%;
+  }
+}

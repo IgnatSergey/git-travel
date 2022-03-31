@@ -52,7 +52,13 @@
               <img class="promo__logo-text" src="img/logo_text.svg" width="305" height="130" alt="Pero Travel">
             </picture>
           </div>
-          <a class="promo__link button-link" href="#">К экскурсиям</a>
+          <div class="promo__link-container">
+            <a class="promo__link button-link" href="#">К экскурсиям
+            </a>
+            <svg class="arrow__icon" width="16" height="8">
+              <use xlink:href="img/sprite.svg#icon_arrow"></use>
+            </svg>
+          </div>
           <ul class="social-list">
             <li class="social-item ">
               <a class="social__link" href="#">
@@ -79,15 +85,31 @@
           <div class="promo__video-block">
             <div class="promo__video-container">
               <video class="promo__video" src="#" poster="img/promo_video_poster1.png" width="295" height="187"></video>
-              <!-- <svg class="icon_play" width="66" height="66">
-                <use xlink:href="img/sprite.svg#icon_play"></use>
+              <!-- <svg class="icon_play" width="36" height="36">
+                <use xlink:href="img/sprite.svg#Subtract"></use>
               </svg> -->
-              <button class="button_play">
-                <svg class="icon_play" width="66" height="66">
-                  <use xlink:href="img/sprite.svg#icon_play"></use>
-                </svg>
-                <!-- <img class="icon_play" src="img/icon_play.svg" width="66" height="66" alt=""> -->
-              </button>
+              <svg class="icon_play" width="44" height="44" viewBox="0 0 44 44" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_19_237)">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M22 40C31.9411 40 40 31.9411 40 22C40 12.0589 31.9411 4 22 4C12.0589 4 4 12.0589 4 22C4 31.9411 12.0589 40 22 40ZM18.25 29.8612L31 22.5L18.25 15.1388L18.25 29.8612Z"
+                    fill="#FFC700" />
+                </g>
+                <defs>
+                  <filter id="filter0_d_19_237" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.78 0 0 0 0 0 0 0 0 1 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_19_237" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_19_237" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
             </div>
             <img class="promo__video-image" src="img/promo_video_poster2.png" width="295" height="187"
               alt="Дорого посреди леса">
@@ -159,8 +181,8 @@
             <p class="popular-excursions__short-description">Конный тур</p>
             <h3 class="popular-excursions__tour-title">Конные прогулки</h3>
             <ul class="popular-excursions__features-list">
-              <li class="popular-excursions__features-item">1,5 часа</li>
-              <li class="popular-excursions__features-item">1 809 ₽</li>
+              <li class="popular-excursions__features-item popular-excursions__features-item--time">1,5 часа</li>
+              <li class="popular-excursions__features-item popular-excursions__features-item--cost">1 809 ₽</li>
             </ul>
             <p class="popular-excursions__description">Конные прогулки проходят в Лазурной долине. С долины открывается
               красивый вид на море, горы и лес. На всем пути следования экскурсии вас будут сопровождать опытные
@@ -190,8 +212,8 @@
             <p class="popular-excursions__short-description">Квадротур</p>
             <h3 class="popular-excursions__tour-title">Пасть дракона</h3>
             <ul class="popular-excursions__features-list">
-              <li class="popular-excursions__features-item">2,5 часа</li>
-              <li class="popular-excursions__features-item">3 515 ₽</li>
+              <li class="popular-excursions__features-item popular-excursions__features-item--time">2,5 часа</li>
+              <li class="popular-excursions__features-item popular-excursions__features-item--cost">3 515 ₽</li>
             </ul>
             <p class="popular-excursions__description">Маршрут на Квадроциклах проходит по горной реке Мзымта вдоль
               белых скал и самшитовый лес к водопаду Глубокий Яр или "Пасть Дракона" (экскурсионное название).
@@ -221,8 +243,8 @@
             <p class="popular-excursions__short-description">Автобусный тур</p>
             <h3 class="popular-excursions__tour-title">Женский монастырь</h3>
             <ul class="popular-excursions__features-list">
-              <li class="popular-excursions__features-item">4 часа</li>
-              <li class="popular-excursions__features-item">618 ₽</li>
+              <li class="popular-excursions__features-item popular-excursions__features-item--time">4 часа</li>
+              <li class="popular-excursions__features-item popular-excursions__features-item--cost">618 ₽</li>
             </ul>
             <p class="popular-excursions__description">Троице - Георгиевский женский монастырь расположен в селе Лесное
               в живописном месте, в котором гармонично сочетаются красота природы и красота архитектуры сотворенная
@@ -309,8 +331,97 @@
         </ul>
         <p class="excursions-types__offer">Выбирайте на нашем сайте экскурсию, которая подходит именно вам и
           записывайтесь онлайн без очередей, просто и быстро!</p>
-        <a class="excursions-types__link button-link" href="#">К экскурсиям</a>
+          <div class="excursions-types__link-container">
+            <a class="excursions-types__link button-link" href="#">К экскурсиям
+            </a>
+            <svg class="arrow__icon" width="16" height="8">
+              <use xlink:href="img/sprite.svg#icon_arrow"></use>
+            </svg>
+          </div>
       </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery__header">
+          <h2 class="gallery__title division-title">Галерея</h2>
+          <a class="gallery__link" href="#">Смотреть все</a>
+        </div>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery-grid">
+          <div class="gallery__image-wrapper gallery__image-lake gallery__image-mobile gallery__image-desktop">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" width="503" height="280"
+                srcset="img/gallery/mountain_lake_desktop.webp 1x, img/gallery/mountain_lake_desktop@2x.webp 2x">
+              <source type="image/webp" width="380" height="260"
+                srcset="img/gallery/mountain_lake_mobile.webp 1x, img/gallery/mountain_lake_mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="503" height="280"
+                srcset="img/gallery/mountain_lake_mobile.jpg 1x, img/gallery/mountain_lake_mobile@2x.jpg 2x">
+              <img class="gallery__image" src="img/gallery/mountain_lake_mobile.jpg" width="380" height="260"
+                srcset="img/gallery/mountain_lake_mobile@2x.jpg 2x" alt="">
+            </picture>
+          </div>
+
+          <div
+            class="gallery__image-wrapper gallery__image-waterfall gallery__image-mobile gallery__image-tablet gallery__image-desktop">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" width="362" height="567"
+                srcset="img/gallery/waterfall_desktop.webp 1x, img/gallery/waterfall_desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" width="205" height="567"
+                srcset="img/gallery/waterfall_tablet.webp 1x, img/gallery/waterfall_tablet@2x.webp 2x">
+              <source type="image/webp" width="180" height="400"
+                srcset="img/gallery/waterfall_mobile.webp 1x, img/gallery/waterfall_mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="362" height="567"
+                srcset="img/gallery/waterfall_desktop.jpg 1x, img/gallery/waterfall_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="205" height="567"
+                srcset="img/gallery/waterfall_tablet.jpg 1x, img/gallery/waterfall_tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/gallery/waterfall_mobile.jpg" width="180" height="400"
+                srcset="img/gallery/waterfall_mobile@2x.jpg 2x" alt="">
+            </picture>
+          </div>
+
+          <div
+            class="gallery__image-wrapper gallery__image-bike gallery__image-mobile gallery__image-tablet gallery__image-desktop">
+            <img class="gallery__image" src="img/gallery/quad_bike_mobile.jpg" width="266" height="24"
+              srcset="img/gallery/quad_bike_mobile@2x.jpg 2x" alt="">
+          </div>
+          <div class="gallery__image-wrapper gallery__image-sunset gallery__image-tablet gallery__image-desktop">
+            <img class="gallery__image" src="img/gallery/sunset_tablet.jpg" width="216" height="264"
+              srcset="img/gallery/sunset_tablet@2x.jpg 2x" alt="">
+          </div>
+
+          <div class="gallery__image-wrapper gallery__image-horse gallery__image-desktop">
+            <img class="gallery__image" src="img/gallery/horse_desktop.jpg" width="216" height="264"
+              srcset="img/gallery/horse_desktop@2x.jpg 2x" alt="">
+          </div>
+          <div class="gallery__image-wrapper gallery__image-door gallery__image-desktop">
+            <img class="gallery__image" src="img/gallery/door_desktop.jpg" width="267" height="123"
+              srcset="img/gallery/door_desktop@2x.jpg 2x" alt="">
+          </div>
+          <div class="gallery__image-wrapper gallery__image-city gallery__image-desktop">
+            <img class="gallery__image" src="img/gallery/city_desktop.jpg" width="267" height="123"
+              srcset="img/gallery/city_desktop@2x.jpg 2x" alt="">
+          </div>
+          <div
+            class="gallery__image-wrapper gallery__image-sea gallery__image-mobile gallery__image-tablet gallery__image-desktop">
+            <picture>
+              <source type="image/webp" media="(min-width: 768px)" width="503" height="283"
+                srcset="img/gallery/sea_tablet.webp 1x, img/gallery/sea_tablet@2x.webp 2x">
+              <source type="image/webp" width="180" height="194"
+                srcset="img/gallery/sea_mobile.webp 1x, img/gallery/sea_mobile@2x.webp 2x">
+
+              <source media="(min-width: 768px)" width="503" height="283"
+                srcset="img/gallery/sea_tablet.jpg 1x, img/gallery/sea_tablet@2x.jpg 2x">
+              <img class="gallery__image" src="img/gallery/sea_mobile.jpg" width="180" height="194"
+                srcset="img/gallery/sea_mobile@2x.jpg 2x" alt="">
+            </picture>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <section class="reviews">
@@ -392,7 +503,85 @@
       </div>
     </section>
   </main>
-  <footer>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__grid">
+        <a class="page-footer__logo-link">
+          <img class="page-footer__logo-image" src="img/logo_color.svg" width="79" height="113"
+            alt="Логотип Pero Travel">
+        </a>
+        <ul class="page-footer__nav">
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link">Главная</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Экскурсии</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Личный кабинет</a>
+          </li>
+        </ul>
+        <ul class="page-footer__connection-list">
+          <li class="page-footer__connection-item">
+            <a class="page-footer__connection-link" href="#">
+              <svg class="connection-item__icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon_whatsapp"></use>
+              </svg>
+              <span>+7 964 944 18 74</span>
+            </a>
+          </li>
+          <li class="page-footer__connection-item">
+            <a class="page-footer__connection-link" href="#">
+              <svg class="connection-item__icon connection-item__icon-tg" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon_tg"></use>
+              </svg>
+              <span>+7 918 919 98 28</span>
+            </a>
+          </li>
+          <li class="page-footer__connection-item">
+            <a class="page-footer__connection-link" href="#">
+              <svg class="connection-item__icon connection-item__icon-tg" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon_tg"></use>
+              </svg>
+              <span>Телеграм-бот PeroTravel</span>
+            </a>
+          </li>
+          <li class="page-footer__connection-item ">
+            <a class="page-footer__connection-link" href="mailto:office@perotravel.ru">
+              <svg class="connection-item__icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon_mail"></use>
+              </svg>
+              <span>office@perotravel.ru</span>
+            </a>
+          </li>
+          <li class="page-footer__connection-item ">
+            <ul class="social-footer-list">
+              <li class="social-footer-item ">
+                <a class="social-footer__link" href="#">
+                  <svg class="social-footer__icon social-footer__icon-vk" width="26" height="17">
+                    <use xlink:href="img/sprite.svg#icon_vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-footer-item ">
+                <a class="social-footer__link" href="#">
+                  <svg class="social-footer__icon social-footer__icon-inst" width="27" height="27">
+                    <use xlink:href="img/sprite.svg#icon_inst"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-footer-item ">
+                <a class="social-footer__link" href="#">
+                  <svg class="social-footer__icon social-footer__icon-fb" width="12" height="25">
+                    <use xlink:href="img/sprite.svg#icon_fb"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
   </footer>
 

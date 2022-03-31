@@ -66,7 +66,15 @@
   }
 }
 
-.excursions-types__link {
+.excursions-types__link-container {
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 230px;
+  position: relative;
+}
+
+.excursions-types__link:hover + .arrow__icon {
+  fill: $basic-yellow;
+  transform: translateX(100%) scale(3, 2);
 }
