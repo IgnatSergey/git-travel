@@ -4,6 +4,7 @@
   @include font-montserrat(12px, 15px, 500);
   color: $basic-black;
   position: relative;
+  background-color: $background-text-color;
 
   @media (min-width: $tablet-width) {
     padding-top: 40px;
@@ -35,6 +36,11 @@
   grid-column: 1/-1;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   @media (min-width: $tablet-width) {
     margin-left: unset;
@@ -73,6 +79,16 @@
   }
 }
 
+.page-footer__nav-link {
+  &[href]:hover {
+    text-decoration: underline;
+  }
+  &[href]:active {
+    @include font-montserrat(14px, 17px, 700);
+    color: darken($basic-black, 100);
+  }
+}
+
 .page-footer__nav {
   @media (min-width: $tablet-width) {
     margin-top: 15px;
@@ -98,6 +114,10 @@
 .page-footer__connection-link {
   display: flex;
   align-items: center;
+
+  &:hover svg {
+    transform: scale(1.2);
+  }
 }
 
 .connection-item__icon {
@@ -123,19 +143,37 @@
   }
 }
 
-.social-footer-item {
+.social-footer__item {
   margin-right: 6px;
+}
+
+.social-footer__icon {
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(1.2);
+  }
 }
 
 .social-footer__icon-vk {
   fill: $vk-color;
+  &:active {
+    fill: darken($vk-color, 10);
+  }
 }
 
 .social-footer__icon-inst {
   fill: $inst-color;
+  &:active {
+    fill: darken($inst-color, 10);
+  }
 }
 
 .social-footer__icon-fb {
   fill: none;
   stroke: $fb-color;
+  &:active {
+    stroke: darken($fb-color, 10);
+  }
 }

@@ -1,8 +1,24 @@
 .page-header__wrapper {
-  position: relative;
   padding-top: 26px;
   padding-bottom: 26px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.page-header__logo-color-image {
+  display: none;
+}
+
+.page-header__logo-link[href]:hover {
+  & .page-header__logo-image {
+    display: none;
+  }
+}
+
+.page-header__logo-link[href]:hover {
+  & .page-header__logo-color-image  {
+    display: block;
+  }
 }

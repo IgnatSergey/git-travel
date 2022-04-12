@@ -86,7 +86,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      width: 151;
+      width: 151px;
       height: 64px;
       top: 60px;
       left: 537px;
@@ -118,23 +118,6 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 134px;
   }
-}
-
-.button-link {
-  display: block;
-  box-sizing: border-box;
-  @include font-montserrat(14px, 17px, 700);
-  color: $basic-white;
-  width: 230px;
-  height: 50px;
-  padding-left: 52px;
-  padding-top: 16px;
-  border-radius: 60px;
-  background: linear-gradient(
-    92.71deg,
-    $button-color-start 0%,
-    $button-color-end 100%
-  );
 }
 
 .promo__link:hover + .arrow__icon {
@@ -174,11 +157,31 @@
 
 .social__icon {
   fill: $basic-white;
+
+  &:hover {
+    transform: scale(1.2);
+    fill: lighten($basic-yellow, 40);
+  }
+
+  &:active {
+    transform: scale(1.2);
+    fill: darken($basic-yellow, 20);
+  }
 }
 
 .social__item-fb {
   fill: none;
   stroke: $basic-white;
+
+  &:hover {
+    fill: none;
+    stroke: lighten($basic-yellow, 40);
+  }
+
+  &:active {
+    fill: none;
+    stroke: darken($basic-yellow, 20);
+  }
 }
 
 .promo__video-block {
@@ -211,7 +214,6 @@
     height: 66px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: none;
     border: 1px solid $basic-yellow;
   }
 }

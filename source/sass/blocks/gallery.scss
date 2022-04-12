@@ -13,6 +13,10 @@
   @include font-montserrat(12px, 15px, 500);
   color: $basic-black;
   text-decoration: underline;
+
+  &:hover {
+    @include font-montserrat(13px, 15px, 700);
+  }
 }
 
 .gallery-container {
@@ -48,8 +52,8 @@
 }
 
 .gallery__image-wrapper {
-  display: none;
   box-sizing: border-box;
+  display: none;
   width: 100%;
   height: 100%;
 }

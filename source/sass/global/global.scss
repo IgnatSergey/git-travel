@@ -60,3 +60,42 @@ img {
   height: auto;
   display: block;
 }
+
+.button-link {
+  display: block;
+  box-sizing: border-box;
+  @include font-montserrat(14px, 17px, 700);
+  color: $basic-white;
+  width: 230px;
+  height: 50px;
+  padding-left: 52px;
+  padding-top: 16px;
+  border-radius: 60px;
+  background: linear-gradient(
+    92.71deg,
+    $button-color-start 0%,
+    $button-color-end 100%
+  );
+
+  &:hover {
+    background: linear-gradient(
+      92.71deg,
+      darken($button-color-start, 10) 0%,
+      darken($button-color-end, 10) 100%
+    );
+  }
+
+  &:active {
+    background: linear-gradient(
+      92.71deg,
+      darken($button-color-start, 20) 0%,
+      darken($button-color-end, 20) 100%
+    );
+  }
+}
+
+.division-title {
+  @include font-montserrat(24px, 29px, 700);
+  color: $button-color-start;
+  margin: 0;
+}

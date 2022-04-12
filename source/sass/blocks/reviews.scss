@@ -1,5 +1,6 @@
 .reviews {
   margin-bottom: 196px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 207px;
@@ -20,6 +21,9 @@
   @include font-montserrat(12px, 15px, 500);
   color: $basic-black;
   text-decoration: underline;
+  &:hover {
+    @include font-montserrat(13px, 15px, 700);
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -27,6 +31,7 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    color: $basic-black;
   }
 }
 
@@ -36,7 +41,6 @@
   display: flex;
   margin-right: -24px;
   margin-bottom: 50px;
-  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-right: -79px;
@@ -103,7 +107,7 @@
   }
 }
 
-.revies__data {
+.reviews__data {
   margin: 0;
   @include font-montserrat(14px, 17px, 700);
   margin-bottom: 10px;

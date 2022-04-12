@@ -37,8 +37,8 @@
 }
 
 .main-nav--nojs .main-nav__list {
-  display: block;
   position: static;
+  display: block;
   margin-left: -24px;
 
   @media (min-width: $tablet-width) {
@@ -51,8 +51,8 @@
 }
 
 .main-nav__list {
-  @include non-list;
   margin-top: 20px;
+  @include non-list;
   position: absolute;
   width: 100vw;
   left: -24px;
@@ -82,12 +82,16 @@
 
 .main-nav__link {
   display: block;
-  text-align: center;
   padding-top: 22px;
   padding-bottom: 24px;
+  text-align: center;
   background-color: $basic-white;
   color: $basic-black;
   border-bottom: 1px solid $basic-black;
+
+  &:active {
+    background-color: $background-text-color
+  }
 
   @include font-montserrat(20px, 20px, 800);
 
@@ -97,6 +101,14 @@
     color: $basic-white;
     background-color: transparent;
     border: 0;
+
+    &:hover {
+      color: lighten($basic-yellow, 40);
+    }
+
+    &:active {
+      color: darken($basic-yellow, 20);
+    }
   }
 }
 

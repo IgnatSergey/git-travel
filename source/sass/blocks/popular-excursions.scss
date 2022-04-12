@@ -1,11 +1,6 @@
 .popular-excursions {
   margin-bottom: 151px;
-}
-
-.division-title {
-  @include font-montserrat(24px, 29px, 700);
-  color: $button-color-start;
-  margin: 0;
+  position: relative;
 }
 
 .popular-excursions__title {
@@ -14,6 +9,10 @@
 
 .popular-excursions__show-all {
   display: none;
+
+  &:hover {
+    @include font-montserrat(13px, 15px, 700);
+  }
 
   @media (min-width: $tablet-width) {
     display: block;
@@ -33,15 +32,9 @@
   justify-content: space-between;
 }
 
-
-.popular-excursions__list {
-  @include non-list();
-  @include font-montserrat(13px, 16px, 500);
-  color: $basic-white;
-  display: flex;
-  overflow: hidden;
+.scroll-container {
   margin-right: -24px;
-  margin-bottom: 55px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-right: -79px;
@@ -53,6 +46,39 @@
   }
 }
 
+.simplebar-scrollbar {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.simplebar-track.simplebar-horizontal {
+  width: 62vw;
+  margin-left: auto;
+  height: 2px;
+  background-color: $scale-color;
+  border-radius: 10px;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  opacity: 1;
+  left: 0;
+  top: -2px;
+  height: 2px;
+  background-color: $button-color-start;
+  border: 0;
+  border-radius: 10px;
+}
+
+.popular-excursions__list {
+  @include non-list();
+  @include font-montserrat(13px, 16px, 500);
+  color: $basic-white;
+  display: flex;
+  margin-bottom: 76px;
+}
+
 .popular-excursions__item {
   box-sizing: border-box;
   min-width: 280px;
@@ -62,7 +88,6 @@
   flex-direction: column;
   position: relative;
   border-radius: 11px;
-  // border: 1px solid red;
   overflow: hidden;
   margin-right: 20px;
 
@@ -81,7 +106,6 @@
 .popular-excursions_image-container {
   height: 100%;
   width: 100%;
-  // display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -171,8 +195,17 @@
 }
 
 .slider__controls-container {
-  margin-left: -8px;
-  margin-right: 51px;
+  position: absolute;
+  left: 15px;
+  bottom: -24px;
+
+  @media (min-width: $tablet-width) {
+    left: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 150px;
+  }
 }
 
 .slider__scale {
@@ -209,6 +242,15 @@
 
 .slider__button--active svg {
   stroke: $button-active-color;
+}
+
+.slider__button--active:hover svg {
+  transform: scale(1.2);
+}
+
+.slider__button--active:active svg {
+  transform: scale(1.2);
+  stroke: darken($button-active-color, 10);
 }
 
 .slider__bar {

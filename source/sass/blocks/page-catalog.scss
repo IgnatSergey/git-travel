@@ -1,0 +1,61 @@
+.excursion-selection__title {
+  text-transform: uppercase;
+  @include font-montserrat(36px, 44px, 700);
+  margin-top: 55px;
+  margin-bottom: 222px;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    @include font-montserrat(48px, 59px, 700);
+    margin-top: 116px;
+    margin-bottom: 326px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-montserrat(72px, 88px, 700);
+    margin-top: 33px;
+    margin-bottom: 99px;
+  }
+
+  &::before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 370px;
+    background-image: url("../../img/background_our_excursion_mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_our_excursion_mobile@2x.jpg");
+    }
+
+    @media (min-width: $tablet-width) {
+      height: 510px;
+      background-image: url("../../img/background_our_excursion_tablet.jpg");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background_our_excursion_tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 289px;
+      background-image: url("../../img/background_our_excursion_desktop.jpg");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background_our_excursion_desktop@2x.jpg");
+      }
+    }
+  }
+}
+
+.page-catalog__grid {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 295px 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+}
