@@ -1,5 +1,5 @@
 .popular-excursions {
-  margin-bottom: 151px;
+  margin-bottom: 167px;
   position: relative;
 }
 
@@ -59,6 +59,13 @@
   border-radius: 10px;
   border: 0;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    width: 72vw;
+  }
+  @media (min-width: $desktop-width) {
+    width: 79vw;
+  }
 }
 
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
@@ -77,6 +84,11 @@
   color: $basic-white;
   display: flex;
   margin-bottom: 76px;
+
+  @media (min-width: $tablet-width) {
+    @include font-montserrat(12px, 15px, 500);
+    margin-bottom: 60px;
+  }
 }
 
 .popular-excursions__item {
@@ -94,12 +106,13 @@
   @media (min-width: $tablet-width) {
     min-width: 295px;
     min-height: 490px;
+    padding: 174px 15px 31px 15px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 360px;
     min-height: 497px;
-    padding-bottom: 42px;
+    padding: 211px 15px 42px 15px;
   }
 }
 
@@ -127,6 +140,10 @@
   @include font-montserrat(13px, 17px, 700);
   color: $basic-yellow;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    @include font-montserrat(14px, 17px, 700);
+  }
 }
 
 .popular-excursions__features-list {
@@ -184,14 +201,10 @@
   margin-top: auto;
   width: 160px;
   height: 40px;
+  padding: 0;
+  text-align: center;
   padding-top: 12px;
-  padding-left: 43px;
-}
-
-.slider__controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include font-montserrat(12px, 15px, 700);
 }
 
 .slider__controls-container {
@@ -208,22 +221,6 @@
   }
 }
 
-.slider__scale {
-  position: relative;
-  height: 2px;
-  background-color: $scale-color;
-  margin-right: -24px;
-  flex-grow: 1;
-
-  @media (min-width: $tablet-width) {
-    margin-right: -79px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: -160px;
-  }
-}
-
 .slider__button-leaf {
   width: 40px;
   cursor: pointer;
@@ -236,8 +233,8 @@
   stroke: $scale-color;
 }
 
-.slider__button-leaf--back {
-  margin-right: 15px;
+.slider__button-leaf-back {
+  margin-right: 21px;
 }
 
 .slider__button--active svg {

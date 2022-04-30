@@ -50,6 +50,13 @@
   }
 }
 
+.page-footer__logo-image {
+  @media (min-width: $tablet-width) {
+    width: 65px;
+    height: 93px;
+  }
+}
+
 .page-footer__nav,
 .page-footer__connection-list,
 .social-footer-list {
@@ -58,6 +65,7 @@
 }
 
 .page-footer__connection-list {
+  margin-left: auto;
   @media (min-width: $tablet-width) {
     height: 79px;
     display: flex;

@@ -1,6 +1,6 @@
 .promo {
   padding-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 148px;
 
   &::before {
     content: "";
@@ -54,7 +54,7 @@
 .promo__discription-text {
   display: block;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 29px;
   position: relative;
   text-transform: uppercase;
   @include font-montserrat(36px, 24px, 700);
@@ -68,6 +68,7 @@
   @media (min-width: $desktop-width) {
     @include font-montserrat(72px, 88px, 700);
     margin-top: 0;
+    margin-bottom: 17px;
   }
 
   &::before {
@@ -81,21 +82,22 @@
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
-      top: 38px;
+      top: 44px;
       left: 344px;
     }
 
     @media (min-width: $desktop-width) {
       width: 151px;
       height: 64px;
-      top: 60px;
+      background-size: 151px 64px;
+      top: 50px;
       left: 537px;
     }
   }
 }
 
 .promo__logo-text {
-  margin-bottom: 85px;
+  margin-bottom: 97px;
   @media (min-width: $tablet-width) {
     width: 406px;
     height: 172px;
@@ -104,15 +106,15 @@
     width: 723px;
     height: 117px;
     margin-top: -30px;
-    margin-bottom: 70px;
+    margin-bottom: 65px;
   }
 }
 
 .promo__link-container {
   position: relative;
-  margin-bottom: 98px;
+  margin-bottom: 91px;
   @media (min-width: $tablet-width) {
-    margin-bottom: 225px;
+    margin-bottom: 220px;
   }
 
   @media (min-width: $desktop-width) {
@@ -135,7 +137,7 @@
 .social-list {
   @include non-list();
   margin-left: auto;
-  margin-bottom: 105px;
+  margin-bottom: 100px;
   width: 28px;
 
   @media (min-width: $tablet-width) {
@@ -226,6 +228,8 @@
 }
 
 .promo__video-image {
+  width: 295px;
+    height: 187px;
   @media (min-width: $desktop-width) {
     width: 360px;
     height: 227px;

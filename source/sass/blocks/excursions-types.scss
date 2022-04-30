@@ -2,7 +2,7 @@
   @include font-montserrat(13px, 16px, 500);
   margin-bottom: 150px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     @include font-montserrat(14px, 17px, 500);
   }
 }
@@ -15,10 +15,11 @@
   @include non-list();
   margin-bottom: 60px;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -30,28 +31,45 @@
 .excursions-types__item--bus {
   background-image: url("../../img/bus.svg");
   background-repeat: no-repeat;
+  @media (min-width: $desktop-width) {
+    order: 1;
+  }
 }
 
 .excursions-types__item--yacht {
   background-image: url("../../img/yacht.svg");
   background-repeat: no-repeat;
+  @media (min-width: $desktop-width) {
+    order: 3;
+  }
 }
 
 .excursions-types__item--jeep {
   background-image: url("../../img/jeep.svg");
   background-repeat: no-repeat;
+  order: 0;
+  @media (min-width: $desktop-width) {
+    order: 2;
+  }
 }
 
 .excursions-types__item--canyon {
   background-image: url("../../img/canyon.svg");
   background-repeat: no-repeat;
+  @media (min-width: $desktop-width) {
+    order: 4;
+  }
 }
 
 .excursions-types__name {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   @include font-montserrat(18px, 22px, 700);
   color: $button-color-start;
+}
+
+.excursions-types__description {
+  margin: 0;
 }
 
 .excursions-types__offer {
@@ -61,8 +79,15 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $tablet-width) {
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
     width: 550px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

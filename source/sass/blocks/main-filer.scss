@@ -19,7 +19,7 @@
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
-  padding-top: 60px;
+  padding-top: 58px;
   padding-bottom: 70px;
 
   @media (min-width: $tablet-width) {
@@ -29,7 +29,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
 }
@@ -78,6 +78,19 @@
   @media (min-width: $tablet-width) {
     @include font-montserrat(14px, 17px, 500);
   }
+  &:hover {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 5px;
+      background-color: darken($scale-color, 10);
+      z-index: 10;
+    }
+  }
 }
 
 .main-filter__excursion-type-input:checked
@@ -97,8 +110,8 @@
 }
 
 .main-filter__container {
-  padding-left: 36px;
-  padding-right: 39px;
+  padding-left: 26px;
+  padding-right: 29px;
 
   @media (min-width: $tablet-width) {
     padding-left: 60px;

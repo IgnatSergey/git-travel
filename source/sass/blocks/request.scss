@@ -39,12 +39,12 @@
   backdrop-filter: blur(20px);
 
   @media (min-width: $tablet-width) {
-    width: 400px;
+    min-width: 400px;
     margin-left: auto;
   }
 
-  @media (min-width: $tablet-width) {
-    min-width: 560px;
+  @media (min-width: $desktop-width) {
+    width: 560px;
     padding-left: 105px;
     padding-right: 95px;
   }
@@ -54,6 +54,7 @@
   @include font-montserrat(24px, 29px, 700);
   color: $basic-white;
   margin: 0;
+  margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 6px;
@@ -78,7 +79,8 @@
   border: 0;
   border-bottom: 1px solid $basic-white;
   width: 100%;
-  margin-bottom: 45px;
+  margin-bottom: 43px;
+  padding: 0;
 
   &::placeholder {
     @include font-montserrat(12px, 15px, 500);

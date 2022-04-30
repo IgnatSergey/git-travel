@@ -41,6 +41,7 @@
   box-sizing: border-box;
   margin: auto;
   padding: 43px;
+  padding-bottom: 33px;
   border-radius: 10px;
   background-color: $background-text-color;
 
@@ -48,6 +49,7 @@
     width: 493px;
     min-height: 433px;
     padding: 62px 55px;
+    padding-bottom: 23px;
     margin: unset;
     margin-top: 139px;
     margin-bottom: 179px;
@@ -71,4 +73,9 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 40px;
   }
+}
+
+.about-us__text {
+  margin: 0;
+  margin-bottom: 20px;
 }

@@ -347,17 +347,17 @@
           <h2 class="side-filter__title">Фильтры</h2>
           <fieldset class="side-filter__fieldset">
             <div
-              class="side-filter__input-container side-filter__input-container-price side-filter__input-container--closed side-filter__input-container--nojs">
+              class="side-filter__input-container side-filter__input-container-price side-filter__input-container--closed">
               <legend class="side-filter__fieldset-legend">Стоимость</legend>
               <button class="side-filter__fieldset-button side-filter__fieldset-button-price" type="button"></button>
               <div class="range-filter side-filter__division">
                 <div class="price-controls">
                   <label class="visually-hidden" for="min-price">Стоимость от</label>
-                  <input class="side-filter__input price-lable" type="number" name="min-price" value="1600"
-                    id="min-price" />
+                  <input class="side-filter__input price-lable price-lable-min" type="number" name="min-price" value="4000"
+                    id="min-price" min="3000" max="8000" step="100"/>
                   <label class="visually-hidden" for="max-price">Стоимость до</label>
-                  <input class="side-filter__input price-lable" type="number" name="max-price" value="4000"
-                    id="max-price" />
+                  <input class="side-filter__input price-lable price-lable-max" type="number" name="max-price" value="5000"
+                    id="max-price" min="3000" max="8000" step="100"/>
                 </div>
 
                 <div class="scale">
@@ -371,7 +371,7 @@
 
           <fieldset class="side-filter__fieldset">
             <div
-              class="side-filter__input-container side-filter__input-container-men-amount side-filter__input-container--closed side-filter__input-container--nojs">
+              class="side-filter__input-container side-filter__input-container-men-amount side-filter__input-container--closed">
               <legend class="side-filter__fieldset-legend">Количество человек</legend>
               <button class="side-filter__fieldset-button side-filter__fieldset-button-men-amount"
                 type="button"></button>
@@ -427,7 +427,7 @@
 
           <fieldset class="side-filter__fieldset">
             <div
-              class="side-filter__input-container side-filter__input-container-place side-filter__input-container--closed side-filter__input-container--nojs">
+              class="side-filter__input-container side-filter__input-container-place side-filter__input-container--closed">
               <legend class="side-filter__fieldset-legend">Место</legend>
               <button class="side-filter__fieldset-button side-filter__fieldset-button-place" type="button"></button>
               <ul class="place__list side-filter__division">
@@ -539,21 +539,21 @@
             <ul class="social-footer-list">
               <li class="social-footer__item ">
                 <a class="social-footer__link" href="#">
-                  <svg class="social-footer__icon social-footer__icon-vk" width="26" height="17">
+                  <svg class="social-footer__icon social-footer__icon-vk" width="38" height="38">
                     <use xlink:href="img/sprite.svg#icon_vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-footer__item ">
                 <a class="social-footer__link" href="#">
-                  <svg class="social-footer__icon social-footer__icon-inst" width="27" height="27">
+                  <svg class="social-footer__icon social-footer__icon-inst" width="32" height="32">
                     <use xlink:href="img/sprite.svg#icon_inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="social-footer__item ">
                 <a class="social-footer__link" href="#">
-                  <svg class="social-footer__icon social-footer__icon-fb" width="12" height="25">
+                  <svg class="social-footer__icon social-footer__icon-fb" width="30" height="30">
                     <use xlink:href="img/sprite.svg#icon_fb"></use>
                   </svg>
                 </a>

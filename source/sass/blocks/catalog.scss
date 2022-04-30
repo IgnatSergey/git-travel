@@ -31,6 +31,10 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 20px;
     min-height: 303px;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -108,6 +112,9 @@
   @include font-montserrat(18px, 22px, 700);
   color: $button-color-start;
   position: relative;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 5px;
+  }
 }
 
 .catalog__card-parameter--money {
@@ -146,7 +153,16 @@
   @include font-montserrat(13px, 16px, 500);
   color: $basic-black;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 57px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font-montserrat(12px, 15px, 500);
+    margin-bottom: 20px;
+  }
 
   &::before {
     content: "";
@@ -158,10 +174,6 @@
     border: 0;
     border-radius: 5px;
     background-color: $button-color-start;
-  }
-
-  @media (min-width: $tablet-width) {
-    // padding-left: 26px;
   }
 }
 
@@ -180,6 +192,7 @@
   padding: 0;
   text-align: center;
   padding-top: 12px;
+  @include font-montserrat(12px, 15px, 500);
   @media (min-width: $tablet-width) {
     width: 160px;
     margin-right: 10px;
@@ -187,6 +200,7 @@
 }
 
 .catalog__card-like {
+  box-sizing: border-box;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -194,9 +208,21 @@
   border: 0;
   background-color: $background-text-color;
   position: relative;
-  &:hover {
-    background-color: darken($background-text-color, 3);
+  @media (min-width: $desktop-width) {
+    &:hover {
+      background-color: darken($background-text-color, 3);
+    }
   }
+}
+
+.button-like__icon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 21px;
+  height: 18px;
+  stroke: $scale-color;
+  fill: none;
 }
 
 .catalog__card-like--active {
@@ -204,15 +230,9 @@
   border: 2px solid $button-color-start;
   & .button-like__icon {
     stroke: $button-color-start;
+    top: 10px;
+    left: 8px;
   }
-}
-
-.button-like__icon {
-  position: absolute;
-  top: 11px;
-  left: 10px;
-  stroke: $scale-color;
-  fill: none;
 }
 
 .catalog__pagination-list {
@@ -227,7 +247,7 @@
     margin-bottom: 150px;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 80px;
   }
 }
