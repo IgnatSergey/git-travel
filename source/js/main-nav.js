@@ -3,10 +3,6 @@ const navToggle = document.querySelector('.main-nav__toggle');
 
 navMain.classList.remove('main-nav--nojs');
 
-// const onMainNavClickClose = () => {
-
-// };
-
 const onMainNavClick = () => {
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav--closed')) {

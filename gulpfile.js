@@ -32,6 +32,12 @@ const styles = () => {
 
 exports.styles = styles;
 
+// Styles simplebar
+const stylesSimplebar = () => {
+  return gulp.src("source/css/*.css")
+  .pipe(gulp.dest("build/css"));
+}
+
 // HTML
 
 const html = () => {
@@ -170,6 +176,7 @@ const build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    stylesSimplebar,
     html,
     scripts,
     sprite,
@@ -185,6 +192,7 @@ exports.default = gulp.series(
   copyImages,
   gulp.parallel(
     styles,
+    stylesSimplebar,
     html,
     scripts,
     sprite,
